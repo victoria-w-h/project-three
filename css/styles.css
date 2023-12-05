@@ -1,6 +1,7 @@
 :root {
 	--navy: #2d3945;
 	--white: #fff;
+	--grey: #eff0f1;
 	--offBlack: #0b0b0b;
 	/* font-size */
 	--sm-fs: 14px;
@@ -35,13 +36,16 @@ body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	font-family: "Merriweather", serif;
-	color: var(--brown);
+	color: var(--navy);
 	font-size: 16px;
 }
 
 /* Utility classes */
 .bg-navy {
 	background-color: var(--navy);
+}
+.bg-grey {
+	background-color: var(--grey);
 }
 .color-white {
 	color: var(--white);
@@ -64,6 +68,9 @@ body {
 .flex-col {
 	flex-direction: column;
 }
+.align-self-center {
+	align-self: center;
+}
 .jc-between {
 	justify-content: space-between;
 }
@@ -82,6 +89,9 @@ body {
 .text-align-center {
 	text-align: center;
 }
+.hr-cont {
+	margin: 0 0 20px;
+}
 hr {
 	border: none;
 	height: 1px;
@@ -99,15 +109,86 @@ header {
 	padding: 30px;
 }
 header p {
+	font-size: var(--xl-fs);
 	font-weight: 700;
 }
 /* main */
 main {
 	padding: 0 20px;
 }
+.intro-cont p {
+	font-size: var(--md-fs);
+}
+h1 {
+	font-size: var(--xl-fs);
+	margin-bottom: 6px;
+}
 /* form */
+h2 {
+	font-size: var(--xl-fs);
+}
 fieldset {
 	border: none;
 	margin: 0;
 	padding: 0;
+}
+button {
+	width: 100%;
+	border: none;
+	padding: 15px 0;
+	margin: 20px 0 80px;
+	background-color: #4ebbb5;
+	color: var(--white);
+	font-family: "Merriweather", serif;
+	font-weight: 700;
+	border-radius: 2px;
+}
+.form-row {
+	display: flex;
+	flex-direction: column;
+	margin: 20px auto;
+}
+
+textarea {
+	resize: none;
+	border: none;
+	border-radius: 2px;
+}
+.form-row input,
+select {
+	height: 44px;
+	background-color: var(--grey);
+	border: none;
+	padding-left: 10px;
+	border-radius: 2px;
+}
+input::placeholder {
+	text-align: end;
+	padding-right: 20px;
+	font-style: italic;
+	color: rgb(196, 196, 196);
+}
+select {
+	appearance: none;
+	background-image: url("/images/select-arrows.png");
+	background-repeat: no-repeat;
+	background-position: 95%;
+	font-family: "Merriweather", serif;
+}
+select option {
+	font-family: "Merriweather", serif;
+}
+.text-label {
+	margin-bottom: 10px;
+	font-weight: 300;
+	font-size: var(--md-fs);
+}
+input:focus,
+select:focus,
+textarea:focus {
+	outline: #46698b solid 2px;
+	border-radius: 2px;
+}
+.intro-cont {
+	padding: 20px 0;
 }
