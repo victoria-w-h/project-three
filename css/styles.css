@@ -1,0 +1,76 @@
+:root {
+	--grey: #fafafa;
+	--white: #fff;
+	--offBlack: #0b0b0b;
+	/* font-size */
+	--sm-fs: 14px;
+	--md-fs: 15px;
+	--base-fs: 16px;
+	--lg-fs: 18px;
+	--xl-fs: 20px;
+}
+@media screen and (min-width: 768px) {
+	:root {
+		--sm-fs: 15px;
+		--med-fs: 16px;
+		--base-fs: 18px;
+		--lg-fs: 20px;
+		--xl-fs: 22px;
+	}
+}
+/* reset styles */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Merriweather", serif;
+	color: var(--brown);
+	font-size: 16px;
+	text-align: center;
+}
+
+/* Utility classes */
+.gap10 {
+	gap: 10px;
+}
+.gap30 {
+	gap: 30px;
+}
+.flex {
+	display: flex;
+}
+.grid {
+	display: grid;
+}
+.hide {
+	display: none;
+}
+.flex-col {
+	flex-direction: column;
+}
+.jc-between {
+	justify-content: space-between;
+}
+.margin-auto {
+	margin: auto;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.block {
+	display: block;
+}
+.w100 {
+	width: 100%;
+}
