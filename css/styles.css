@@ -1,5 +1,5 @@
 :root {
-	--grey: #fafafa;
+	--navy: #2d3945;
 	--white: #fff;
 	--offBlack: #0b0b0b;
 	/* font-size */
@@ -37,10 +37,15 @@ body {
 	font-family: "Merriweather", serif;
 	color: var(--brown);
 	font-size: 16px;
-	text-align: center;
 }
 
 /* Utility classes */
+.bg-navy {
+	background-color: var(--navy);
+}
+.color-white {
+	color: var(--white);
+}
 .gap10 {
 	gap: 10px;
 }
@@ -73,4 +78,36 @@ body {
 }
 .w100 {
 	width: 100%;
+}
+.text-align-center {
+	text-align: center;
+}
+hr {
+	border: none;
+	height: 1px;
+	background-color: #0b0b0b;
+}
+.hr-thick {
+	height: 3px;
+	background-color: #0b0b0b;
+	border: none;
+	margin: 2px 0;
+}
+
+/* header */
+header {
+	padding: 30px;
+}
+header p {
+	font-weight: 700;
+}
+/* main */
+main {
+	padding: 0 20px;
+}
+/* form */
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
 }

@@ -12,8 +12,108 @@
 			rel="stylesheet" />
 	</head>
 	<body>
-		<header>
-			<p>The code review</p>
+		<header class="bg-navy">
+			<p class="uppercase text-align-center color-white">
+				The code review
+			</p>
 		</header>
+		<main>
+			<div class="text-align-center">
+				<h1>Signup for our newsletter</h1>
+				<p>
+					Get the latest news on how your code is doing right in your
+					inbox
+				</p>
+			</div>
+			<hr class="hr-thick" />
+			<hr class="hr-med" />
+			<form action="">
+				<fieldset>
+					<legend>
+						<h2>Contact Information</h2>
+					</legend>
+					<div>
+						<label for="name">Full Name</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Required"
+							required />
+					</div>
+					<div>
+						<label for="email">Email Address</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Required"
+							required />
+					</div>
+					<div>
+						<label for="phone">Phone Number</label>
+						<input type="tel" id="phone" name="phone" />
+					</div>
+					<div>
+						<label for="address">Street Address</label>
+						<input type="text" id="address" name="address" />
+					</div>
+					<div>
+						<label for="city">City</label>
+						<input type="text" id="city" name="city" />
+					</div>
+					<div>
+						<label for="state">State</label>
+						<select name="state" id="state">
+							<option value="disabled" disabled selected>
+								Choose state
+							</option>
+							<option value="colorado">Colorado</option>
+							<option value="nevada">Nevada</option>
+						</select>
+					</div>
+				</fieldset>
+				<hr />
+				<fieldset>
+					<legend>
+						<h2>Newsletter</h2>
+					</legend>
+
+					<div>
+						<p>Select the newsletter you would like to recieve</p>
+						<input id="html-news" type="checkbox" />
+						<label for="html-news">Html News</label>
+						<br />
+						<input id="css-news" type="checkbox" />
+						<label for="css-news">CSS News</label>
+						<br />
+						<input id="js-news" type="checkbox" />
+						<label for="js-news">Javascript News</label>
+					</div>
+					<div>
+						<p>Newsletter format</p>
+						<input
+							type="radio"
+							id="html"
+							name="newsletter-format"
+							value="html" />
+						<label for="html">HTML</label><br />
+						<input
+							type="radio"
+							id="plain-text"
+							name="newsletter-format"
+							value="plain-text" />
+						<label for="plain-text">Plain text</label><br />
+					</div>
+					<div class="flex flex-col">
+						<label for="">
+							Other topics you'd like to hear about
+						</label>
+						<textarea name="" id="" cols="30" rows="8"></textarea>
+					</div>
+				</fieldset>
+				<button type="submit">Signup</button>
+			</form>
+		</main>
 	</body>
 </html>
