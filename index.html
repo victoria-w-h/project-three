@@ -17,19 +17,22 @@
 				The code review
 			</p>
 		</header>
-		<main>
-			<div class="text-align-center intro-cont">
-				<h1>Signup for our newsletter</h1>
-				<p>
-					Get the latest news on how your code is doing right in your
-					inbox
-				</p>
-			</div>
+
+		<div class="text-align-center intro-cont">
+			<h1>Signup for our newsletter</h1>
+			<p>
+				Get the latest news on how your code is doing right in your
+				inbox
+			</p>
+
 			<div class="hr-cont">
 				<hr class="hr-thick" />
 				<hr />
 			</div>
-			<form action="">
+		</div>
+		<main class="margin-auto">
+			<!-- used random page example -->
+			<form action="/" method="post">
 				<fieldset>
 					<legend>
 						<h2>Contact Information</h2>
@@ -62,7 +65,8 @@
 							type="tel"
 							id="phone"
 							name="phone"
-							placeholder="Please enter a valid phone number" />
+							placeholder="Required"
+							required />
 					</div>
 					<div class="form-row">
 						<label for="address" class="text-label">
@@ -72,7 +76,8 @@
 							type="text"
 							id="address"
 							name="address"
-							placeholder="Please enter your street address" />
+							placeholder="Required"
+							required />
 					</div>
 					<div class="form-row">
 						<label for="city" class="text-label">City</label>
@@ -80,89 +85,120 @@
 							type="text"
 							id="city"
 							name="city"
-							placeholder="Please enter your city" />
+							placeholder="Required"
+							required />
 					</div>
 					<div class="form-row">
 						<label for="state" class="text-label">State</label>
-						<select name="state" id="state">
-							<option value="disabled" disabled selected>
+						<select name="state" id="state" required>
+							<option
+								value=""
+								class="disabled-select"
+								disabled
+								selected>
 								Choose state
 							</option>
-							<option value="colorado">Colorado</option>
+							<option value="colorado" class="color-white">
+								Colorado
+							</option>
 							<option value="nevada">Nevada</option>
 						</select>
 					</div>
-					<div class="form-row">
-						<label for="zipcode" class="text-label">Zip Code</label>
-						<input type="text" id="zipcode" name="zipcode" />
+					<div class="form-row zip-code-cont">
+						<label for="zipcode" class="text-label">
+							Zip Code
+						</label>
+						<input
+							type="text"
+							id="zipcode"
+							name="zipcode"
+							placeholder="Required"
+							required />
 					</div>
 				</fieldset>
 				<hr />
 				<fieldset>
 					<legend>
-						<h2>Newsletter</h2>
+						<h2 class="newsletter-h2">Newsletter</h2>
 					</legend>
 
 					<div>
-						<p>Select the newsletter you would like to recieve</p>
-						<div class="flex gap10">
+						<p class="news-sub">
+							Select the newsletter you would like to recieve
+						</p>
+						<div class="flex gap10 checkbox-cont">
 							<input id="html-news" type="checkbox" />
-							<label for="html-news" class="align-self-center"
-								>Html News</label
-							>
+							<label
+								for="html-news"
+								class="align-self-center news-label">
+								HTML News
+							</label>
 						</div>
 
-						<div class="flex gap10">
+						<div class="flex gap10 checkbox-cont">
 							<input id="css-news" type="checkbox" />
-							<label for="css-news" class="align-self-center"
-								>CSS News</label
-							>
+							<label
+								for="css-news"
+								class="align-self-center news-label">
+								CSS News
+							</label>
 						</div>
 
-						<div class="flex gap10">
+						<div class="flex gap10 checkbox-cont">
 							<input id="js-news" type="checkbox" />
-							<label for="js-news" class="align-self-center"
-								>Javascript News</label
-							>
+							<label
+								for="js-news"
+								class="align-self-center news-label">
+								Javascript News
+							</label>
 						</div>
 					</div>
 					<div>
-						<p>Newsletter format</p>
-						<div class="flex gap10">
+						<p class="news-sub">Newsletter format</p>
+						<div class="flex gap10 radio-cont">
 							<input
 								type="radio"
 								id="html"
 								name="newsletter-format"
 								value="html" />
-							<label for="html" class="align-self-center"
+							<label
+								for="html"
+								class="align-self-center news-label"
 								>HTML</label
 							>
 						</div>
-						<div class="flex gap10">
+						<div class="flex gap10 radio-cont">
 							<input
 								type="radio"
 								id="plain-text"
 								name="newsletter-format"
 								value="plain-text" />
-							<label for="plain-text" class="align-self-center"
-								>Plain text</label
-							>
+							<label
+								for="plain-text"
+								class="align-self-center news-label">
+								Plain text
+							</label>
 						</div>
 					</div>
 					<div class="flex flex-col">
-						<label for="topics">
+						<label for="topics" class="news-sub">
 							Other topics you'd like to hear about
 						</label>
 						<textarea
 							name="topics"
 							id="topics"
 							cols="30"
-							rows="8"
-							class="bg-grey"></textarea>
+							rows="5"
+							class="bg-grey"
+							placeholder="Required"
+							required></textarea>
 					</div>
 				</fieldset>
-				<button type="submit">Sign up</button>
+				<button type="submit">Sign Up</button>
 			</form>
 		</main>
+		<footer>
+			<p>Copyright The Code Review</p>
+		</footer>
 	</body>
 </html>

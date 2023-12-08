@@ -90,7 +90,8 @@ body {
 	text-align: center;
 }
 .hr-cont {
-	margin: 0 0 20px;
+	margin: 10px auto 20px;
+	max-width: 800px;
 }
 hr {
 	border: none;
@@ -114,7 +115,8 @@ header p {
 }
 /* main */
 main {
-	padding: 0 20px;
+	padding: 20px 20px 0;
+	max-width: 800px;
 }
 .intro-cont p {
 	font-size: var(--md-fs);
@@ -136,12 +138,17 @@ button {
 	width: 100%;
 	border: none;
 	padding: 15px 0;
-	margin: 20px 0 80px;
+	margin: 20px 0 0;
 	background-color: #4ebbb5;
 	color: var(--white);
 	font-family: "Merriweather", serif;
 	font-weight: 700;
 	border-radius: 2px;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+button:hover {
+	background-color: #46698b;
 }
 .form-row {
 	display: flex;
@@ -166,7 +173,7 @@ input::placeholder {
 	text-align: end;
 	padding-right: 20px;
 	font-style: italic;
-	color: rgb(196, 196, 196);
+	color: rgb(157, 157, 157);
 }
 select {
 	appearance: none;
@@ -174,14 +181,24 @@ select {
 	background-repeat: no-repeat;
 	background-position: 95%;
 	font-family: "Merriweather", serif;
+	color: var(--offBlack);
 }
-select option {
-	font-family: "Merriweather", serif;
+
+select:invalid {
+	color: rgb(157, 157, 157);
 }
 .text-label {
 	margin-bottom: 10px;
 	font-weight: 300;
 	font-size: var(--md-fs);
+}
+input,
+select,
+textarea {
+	/* used for smoother transition */
+	outline: transparent solid 2px;
+	border-radius: 2px;
+	transition: all 0.4s ease;
 }
 input:focus,
 select:focus,
@@ -190,5 +207,65 @@ textarea:focus {
 	border-radius: 2px;
 }
 .intro-cont {
-	padding: 20px 0;
+	padding: 20px 20px 5px;
+	background-color: #46698b;
+	color: var(--white);
+}
+.zip-code-cont input {
+	width: 50%;
+}
+.newsletter-h2 {
+	padding-top: 20px;
+}
+.news-sub {
+	padding: 20px 0 15px;
+}
+.checkbox-cont,
+.radio-cont {
+	padding: 5px 0;
+}
+textarea {
+	padding: 10px 20px;
+	font-family: "Merriweather", serif;
+	width: 100%;
+}
+.news-sub,
+.news-label {
+	font-weight: 300;
+	font-size: var(--md-fs);
+}
+footer {
+	padding: 20px 20px 100px;
+	text-align: center;
+}
+footer p {
+	font-size: var(--sm-fs);
+	font-style: italic;
+	color: rgb(157, 157, 157);
+}
+@media screen and (min-width: 768px) {
+	.hr-cont {
+		margin: 50px auto 30px;
+	}
+	main {
+		padding: 40px 20px 30px;
+	}
+	.form-row {
+		flex-direction: row;
+	}
+	.form-row input,
+	select {
+		max-width: 600px;
+		margin-left: auto;
+		width: 100%;
+		flex: 1;
+	}
+	.text-label {
+		margin: 0;
+		align-self: center;
+	}
+	.zip-code-cont input {
+		max-width: 25%;
+		margin-left: 97px;
+	}
 }
