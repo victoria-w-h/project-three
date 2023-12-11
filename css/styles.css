@@ -192,6 +192,9 @@ select:invalid {
 	font-weight: 300;
 	font-size: var(--md-fs);
 }
+input {
+	font-family: "Merriweather", serif;
+}
 input,
 select,
 textarea {
